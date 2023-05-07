@@ -1,0 +1,21 @@
+.card {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+  height: 400px;
+  margin: 10px 5px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+img.card-img-top {
+  height: 250px;
+  padding: 2rem;
+  object-fit: contain;
+}
+/* linear-gradient(to right,#a10202 */
+.form-control:focus {
+    border-color: #5c0303;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(92 3 3 / 25%);
+}

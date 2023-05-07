@@ -1,0 +1,30 @@
+<div class="pt-5">
+  <div class="col-12 col-md-4">
+    <div class="form-group">
+      <label for="example">Categories</label>
+      <select class="form-control mt-2" id="example" (change)="filterProduct($event)">
+        <option value="all" selected>All</option>
+        <option value="{{option}}" *ngFor="let option of Categories">{{option}}</option>
+      </select>
+    </div>
+  </div>
+<div class="row mt-4" *ngIf="!loading">
+  <div class="col-12 col-md-3" *ngFor="let item of products" >
+    <div class="card">
+      <img class="card-img-top" [src]="item.image" alt="this my pc">
+      <div class="card-body">
+        <h5 class="card-title text-truncate">{{item.title}}</h5>
+        <p class="text-truncate">{{item.description}}</p>
+        <div class="d-flex justify-content-between">
+          <p class="card-text">{{item.price}} LE</p>
+          <button class="btn btn-primary" (click)="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center w-100" *ngIf="loading">
+  <app-loader></app-loader>
+</div>
+</div>
+
