@@ -1,0 +1,7 @@
+<div class="form-group">
+  <label for="example">{{title}}</label>
+  <select class="form-control mt-2" id="example" (change)="selectData($event)">
+    <option value="all" selected>All</option>
+    <option value="{{option}}" *ngFor="let option of data">{{option}}</option>
+  </select>
+</div>

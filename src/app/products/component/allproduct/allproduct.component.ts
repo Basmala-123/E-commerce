@@ -40,7 +40,7 @@ export class AllproductComponent implements OnInit{
   )}
 
 
-  filterProduct(e:any){
+filterProduct(e:any){
   let value=e.target.value;
   (value=='all') ?this.getProducts(): this.getPrdByCategory(value);
   }
